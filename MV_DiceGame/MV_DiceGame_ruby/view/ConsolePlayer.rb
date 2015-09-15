@@ -1,5 +1,3 @@
-require 'io/console'
-
 module View
   class ConsolePlayer
 
