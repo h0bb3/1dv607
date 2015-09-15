@@ -7,7 +7,7 @@ module View
       message = 'Welcome to the cool Dice Game. Press any Key to play, or q to Quit'
       puts message
 
-      until STDIN.getc == ?q do
+      until gets == "q\n"  do
         system "clear"
         puts message
         if a_game.play
