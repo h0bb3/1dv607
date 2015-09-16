@@ -4,9 +4,8 @@ module View
     QUIT_ON_INPUT  = "q"
 
     def display_instructions
-      message = "Welcome to the cool Dice Game. Press any Key to play, or #{QUIT_ON_INPUT} to Quit"
       system "clear"
-      puts message
+      puts "Welcome to the cool Dice Game. Press any Key to play, or #{QUIT_ON_INPUT} to Quit"
     end
 
     def wants_to_quit?
