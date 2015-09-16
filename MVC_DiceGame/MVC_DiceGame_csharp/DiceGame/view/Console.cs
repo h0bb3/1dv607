@@ -8,16 +8,18 @@ namespace DiceGame.view
 {
 	class Console
 	{
+        private char keyToExit = 'q';
+
 		public void DisplayInstructions()
 		{
 			System.Console.Clear();
-			String message = "Welcome to the cool Dice Game. Press any Key to play, or q to Quit";
+			String message = $"Welcome to the cool Dice Game. Press any Key to play, or { keyToExit } to Quit";
 			System.Console.WriteLine(message);
 		}
 
 		public bool WantsToPlay()
 		{
-			return System.Console.ReadKey().KeyChar != 'q';
+			return System.Console.ReadKey().KeyChar != keyToExit;
 		}
 
 		public char GetInput()
@@ -29,11 +31,11 @@ namespace DiceGame.view
 		{
 			if (a_isWinner)
 			{
-				System.Console.WriteLine("You are a winner: {0} {1}", a_dice1Value, a_dice2Value);
+				System.Console.WriteLine($"You are a winner: { a_dice1Value } { a_dice2Value }");
 			}
 			else
 			{
-				System.Console.WriteLine("Sorry you lost: {0} {1}", a_dice1Value, a_dice2Value);
+				System.Console.WriteLine($"Sorry you lost: { a_dice1Value } { a_dice2Value }");
 			}
 		}
 	}
