@@ -8,7 +8,7 @@ namespace DiceGame.view
 {
 	class Console
 	{
-        private char keyToExit = 'q';
+        private const char keyToExit = 'q';
 
 		public void DisplayInstructions()
 		{
