@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "ComponentDiceGame\Console.csproj", "{F6F47EB5-2B97-473F-AC9D-A3341DA8A95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceGameModel", "DiceGameModel\DiceGameModel.csproj", "{345489C0-6793-4DC7-A7E6-D69680043D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFDiceGame", "WPFDiceGame\WPFDiceGame.csproj", "{0B9C516C-1BF0-4C25-BEA8-D4C08679303A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6F47EB5-2B97-473F-AC9D-A3341DA8A95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F47EB5-2B97-473F-AC9D-A3341DA8A95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F47EB5-2B97-473F-AC9D-A3341DA8A95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F47EB5-2B97-473F-AC9D-A3341DA8A95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345489C0-6793-4DC7-A7E6-D69680043D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345489C0-6793-4DC7-A7E6-D69680043D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345489C0-6793-4DC7-A7E6-D69680043D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345489C0-6793-4DC7-A7E6-D69680043D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9C516C-1BF0-4C25-BEA8-D4C08679303A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9C516C-1BF0-4C25-BEA8-D4C08679303A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9C516C-1BF0-4C25-BEA8-D4C08679303A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9C516C-1BF0-4C25-BEA8-D4C08679303A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
