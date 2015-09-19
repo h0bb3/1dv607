@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require './model/DiceGame.rb'
-require './model/DiceGameObserver.rb'
 require './view/Console.rb'
 require './view/SweConsole.rb'
 require './view/EngConsole.rb'

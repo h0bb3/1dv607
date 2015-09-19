@@ -1,5 +1,5 @@
 module Controller
-  class Player < Model::DiceGameObserver
+  class Player
 
     def initialize a_view
       @view = a_view;
