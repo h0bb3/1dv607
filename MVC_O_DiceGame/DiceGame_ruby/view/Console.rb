@@ -5,5 +5,9 @@ module View
         puts value
     end
 
+    def wants_to_quit?
+      gets == "#{self.class::QUIT_ON_INPUT}\n"
+    end
+
   end
 end

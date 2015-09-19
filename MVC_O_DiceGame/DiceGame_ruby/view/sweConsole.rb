@@ -9,10 +9,6 @@ module View
       puts "Välkommen till tärningsspelet. Tryck en tangent för att spela, eller #{QUIT_ON_INPUT} för att sluta"
     end
 
-    def wants_to_quit?
-      gets == "#{QUIT_ON_INPUT}\n"
-    end
-
     def display_result player_won
         if player_won
           puts "Du är en vinnare!"
