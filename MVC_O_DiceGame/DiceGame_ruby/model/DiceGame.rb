@@ -14,13 +14,6 @@ module Model
       @observers << subscriber
     end
 
-    def roll dice
-      dice.roll
-      @observers.each do |o|
-        o.rolled_dice dice.face_value
-      end
-    end
-
     def play
       roll @d1
       sleep 2
@@ -29,6 +22,15 @@ module Model
       roll @d3
 
       @d1.face_value + @d2.face_value + @d3.face_value == 9
+    end
+
+    private
+
+    def roll dice
+      dice.roll
+      @observers.each do |o|
+        o.rolled_dice dice.face_value
+      end
     end
 
   end
