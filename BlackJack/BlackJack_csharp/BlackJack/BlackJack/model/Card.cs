@@ -13,7 +13,8 @@ namespace BlackJack.model
 			Clubs,
 			Diamonds,
 			Spades,
-			Count
+			Count,
+			Hidden
 		}
 
 		public enum Value {
@@ -30,25 +31,39 @@ namespace BlackJack.model
 			Queen,
 			King,
 			Ace,
-			Count
+			Count,
+			Hidden,
 		}
 
 		Color m_color;
 		Value m_value;
+		bool m_isHidden;
 
 		public Card(Color a_color, Value a_value)
 		{
 			m_color = a_color;
 			m_value = a_value;
+			m_isHidden = true;
+		}
+
+		public void Show(bool a_doShow = true)
+		{
+			m_isHidden = !a_doShow;
 		}
 
 		public Color GetColor()
 		{
+			if (m_isHidden) {
+				return Color.Hidden;
+			}
 			return m_color;
 		}
 
 		public Value GetValue()
 		{
+			if (m_isHidden) {
+				return Value.Hidden;
+			}
 			return m_value;
 		}
 

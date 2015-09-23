@@ -11,8 +11,12 @@ namespace BlackJack
 		static void Main(string[] args)
 		{
 			model.Dealer d = new model.Dealer();
+			model.Player p = new model.Player();
 			view.Console v = new view.Console();
-			v.PresentInstructions();
+			controller.Player c = new controller.Player();
+
+
+			while (c.PlayGame(v, d, p)) ;
 		}
 	}
 }

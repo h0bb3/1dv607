@@ -9,6 +9,7 @@ namespace BlackJack.model
 	class Deck
 	{
 		List<Card> m_cards;
+		Random r = new Random();
 
 		public Deck()
 		{
@@ -24,7 +25,14 @@ namespace BlackJack.model
 			}
 		}
 
-		private void Add(Card a_card) {
+		public Card GetCard()
+		{
+			Card c = m_cards.ElementAt(0);
+			m_cards.RemoveAt(0);
+			return c;
+		}
+
+		public void Add(Card a_card) {
 			m_cards.Add(a_card);
 		}
 
