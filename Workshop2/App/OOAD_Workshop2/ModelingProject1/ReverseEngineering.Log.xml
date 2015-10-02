@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-10-02T09:20:41" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '65aad1db-3e6e-4c4f-9ac9-46dad418689a' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::model' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::model::BoatType' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::model::Member' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView' -  (Class)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::BoatId' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ClearCharacter' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ConsoleMenu' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ConsoleView' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ConsoleView::menu' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::DisplayMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::DisplayMenu::item' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::InputFormNewMember' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::Length' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::MemberId' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::MemberNameInput' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::MemberPersonalNoInput' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowDeleteMember' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormAddBoat' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormAddBoat::selected' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormDeleteBoat' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormDeleteBoat::selected' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormSelectMember' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormUpdateBoat' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormUpdateBoat::selected' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormUpdateMember' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowFormUpdateMember::selected' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowListOfBoats' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowListOfBoats::member' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowMember' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowMember::member' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowMemberList' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowMemberList::members' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowVerboseMemberList' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::ShowVerboseMemberList::members' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::ConsoleView::TypeOfBoat' -  (Property)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::IMenu' -  (Class)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::IMenu::IMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu' -  (Class)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::GetMenuEvent' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::Menu' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::ShowMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::ShowMenu::item' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::showMessage' -  (Operation)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::Menu::showMessage::message' -  (Parameter)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems' -  (Enumeration)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::Boat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::DeleteBoat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::DeleteMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::Main' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::Member' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::Members' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::NewBoat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::NewMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::NoAction' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::Quit' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::SelectMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::ShowCompactList' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::ShowVerboseList' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::UpdateBoat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::OOAD_Workshop2::view::MenuItems::UpdateMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::IEnumerable' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Collections::Generic::IEnumerable&lt;Member‎&gt;' -  (Interface)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Single' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::OOAD_Workshop2::view::ConsoleView to ModelingProject1::System::Single (Association)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::OOAD_Workshop2::view::ConsoleView to ModelingProject1::OOAD_Workshop2::model::BoatType (Association)" />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="High" Text="(4) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="High" Text="(5) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-10-02T09:20:42" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="8cd4537c-6f68-43ab-bb96-5570d9467dff"
+  name="OOAD_Workshop2"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="34c2496b-56eb-444c-87b5-be00c6bc1242"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DOOAD_Workshop2"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="59c3c99b-2a33-44ee-98eb-c14d1c1244cd"
+        LastKnownName="control"
+        LastKnownLocation="Package1_0919.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ea453de4-e5c7-4e59-afd1-d7f307844dc2"
+        LastKnownName="view"
+        LastKnownLocation="Package2_0919.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="bb6b9755-a11c-4f76-b2af-9ba2d47892bf"
+        LastKnownName="model"
+        LastKnownLocation="Package3_0919.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

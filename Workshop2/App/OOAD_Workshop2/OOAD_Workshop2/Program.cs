@@ -21,12 +21,26 @@ namespace OOAD_Workshop2
 
             var db = new RegistrationDAL();
             var reg = new Registration(db);
-            var c_view = new ConsoleView(menu);
-            var app = new Application(c_view, reg);
+            var V_console = new ConsoleView(menu);
 
-            c_view.DisplayMenu(Menu.MenuItems.Main);
+            var C_app = new Application(V_console, reg);
 
-            while (app.Run());
+            V_console.DisplayMenu(Menu.MenuItems.Main);
+
+            //Simple error handling. Application starts over if an exception is thrown.
+            Start:
+            try
+            {
+                while (C_app.Run()) ;
+            }
+            catch
+            {
+                Console.Clear();
+                V_console.DisplayMenu(Menu.MenuItems.Main);
+                Console.Write("Something went wrong. Please try again");
+                goto Start;
+            }
+            
 
         }
     }
