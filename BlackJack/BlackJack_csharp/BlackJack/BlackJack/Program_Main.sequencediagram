@@ -165,24 +165,24 @@
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="080317df-4e9d-4068-94ac-b3ca1e2bfcbe" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="98700551-a473-4931-8b6d-9031b7c633f7" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b11aa099-0a5c-4ee7-a817-91a5b215dee6" name="MessageOccurrenceSpecification">
+          <messageOccurrenceSpecification Id="080317df-4e9d-4068-94ac-b3ca1e2bfcbe" name="MessageOccurrenceSpecification">
             <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+              <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="5ed765cc-4a74-4608-86b2-dd8674a67466" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b11aa099-0a5c-4ee7-a817-91a5b215dee6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="ff34ba81-2591-46cd-a8de-5b972420dd5a" name="ExecutionOccurrenceSpecification">
@@ -230,14 +230,14 @@
               <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="2e6722f5-eb35-4a48-99cf-7c1f283d294f" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8d85d2e5-eb7c-4e08-95ae-fb6498e93715" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="e20537fb-6606-469d-941b-8053d1de39d4" LastKnownName="p : Player" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2e6722f5-eb35-4a48-99cf-7c1f283d294f" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="d71781f6-25a5-47e3-94d6-3168d45eb672" name="ExecutionOccurrenceSpecification">
@@ -361,6 +361,19 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
+          <proxyOperandOccurrenceSpecification Id="3e71411b-7cad-440c-bd6c-52a6d415a8b7" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyOperandOccurrenceSpecification>
+          <proxyOperandOccurrenceSpecification Id="9f52df47-be43-418b-8676-c3173bac869f" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyOperandOccurrenceSpecificationMoniker Id="3e71411b-7cad-440c-bd6c-52a6d415a8b7" />
+            </proxyOccurrenceSpecification>
+          </proxyOperandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="c9684f8e-fe61-4fdb-ac3e-d2d8c5186cd7" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
@@ -381,19 +394,6 @@
             <proxyOccurrenceSpecification>
               <proxyOperandOccurrenceSpecificationMoniker Id="9f52df47-be43-418b-8676-c3173bac869f" />
             </proxyOccurrenceSpecification>
-          </proxyOperandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="9f52df47-be43-418b-8676-c3173bac869f" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyOperandOccurrenceSpecificationMoniker Id="3e71411b-7cad-440c-bd6c-52a6d415a8b7" />
-            </proxyOccurrenceSpecification>
-          </proxyOperandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="3e71411b-7cad-440c-bd6c-52a6d415a8b7" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
           </proxyOperandOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="16a7d373-d5f9-4446-853a-aa11dbc943bc" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
@@ -423,6 +423,19 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="7503b782-3e17-46b9-b10a-4077fa893a6f" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="928dc80e-85b8-402a-a446-4939ed1c8a3c" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="feeb5705-5ff9-4717-a177-88e05726999e" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6b6920a5-43a1-40b1-872a-1f5a7e882b35" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
@@ -444,63 +457,6 @@
               <proxyMessageOccurrenceSpecificationMoniker Id="7503b782-3e17-46b9-b10a-4077fa893a6f" />
             </proxyOccurrenceSpecification>
           </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="928dc80e-85b8-402a-a446-4939ed1c8a3c" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="feeb5705-5ff9-4717-a177-88e05726999e" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="7503b782-3e17-46b9-b10a-4077fa893a6f" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="763b41d1-db33-48f2-8950-357a8a84b74b" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="a1803f50-ceba-4219-b5af-110892cfdac8" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="0bacb69d-e618-4f1c-80ff-7214d47e23f9" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="a1803f50-ceba-4219-b5af-110892cfdac8" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="49b9820e-be9d-4fe5-99be-d6ff2c16a7c8" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="49b9820e-be9d-4fe5-99be-d6ff2c16a7c8" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="9b21c221-4dae-4674-820c-2dc483458413" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="9b21c221-4dae-4674-820c-2dc483458413" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="d2243a07-a11b-4505-9385-8690e80efd91" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="f02959de-42c8-4b87-8f95-f86993d4d0f1" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="68d868d8-16b6-43fe-8d47-59b0e9f3eefb" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -519,6 +475,21 @@
               <proxyBehaviorExecutionSpecificationMoniker Id="0678a1e4-2847-451e-a34a-66174275a95b" />
             </behaviorExecutionSpecification>
           </proxyBehaviorExecutionSpecification>
+          <behaviorExecutionSpecification Id="f3bc14fa-deb8-4cf9-9fa6-334870d224a2" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="3e0ea1ad-6d75-4a94-96fc-82d81189a1b1" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="0f84547c-c5ff-434d-9974-9283a5ab6fd8" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="6b6920a5-43a1-40b1-872a-1f5a7e882b35" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="763b41d1-db33-48f2-8950-357a8a84b74b" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <proxyBehaviorExecutionSpecification Id="0678a1e4-2847-451e-a34a-66174275a95b" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
@@ -537,21 +508,6 @@
               <behaviorExecutionSpecificationMoniker Id="f3bc14fa-deb8-4cf9-9fa6-334870d224a2" LastKnownName="BehaviorExecutionSpecification" />
             </behaviorExecutionSpecification>
           </proxyBehaviorExecutionSpecification>
-          <behaviorExecutionSpecification Id="f3bc14fa-deb8-4cf9-9fa6-334870d224a2" name="BehaviorExecutionSpecification">
-            <coveredLifelines>
-              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker Id="3e0ea1ad-6d75-4a94-96fc-82d81189a1b1" LastKnownName="ExecutionOccurrenceSpecification" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker Id="0f84547c-c5ff-434d-9974-9283a5ab6fd8" LastKnownName="ExecutionOccurrenceSpecification" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker Id="6b6920a5-43a1-40b1-872a-1f5a7e882b35" LastKnownName="MessageOccurrenceSpecification" />
-              <messageOccurrenceSpecificationMoniker Id="763b41d1-db33-48f2-8950-357a8a84b74b" LastKnownName="MessageOccurrenceSpecification" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification Id="0f84547c-c5ff-434d-9974-9283a5ab6fd8" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -591,6 +547,50 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="e58a0b4e-1c3d-409f-8f5c-869aec9ac112" />
             </proxyOccurrenceSpecification>
           </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="9b21c221-4dae-4674-820c-2dc483458413" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="49b9820e-be9d-4fe5-99be-d6ff2c16a7c8" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="9b21c221-4dae-4674-820c-2dc483458413" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="a1803f50-ceba-4219-b5af-110892cfdac8" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="49b9820e-be9d-4fe5-99be-d6ff2c16a7c8" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="0bacb69d-e618-4f1c-80ff-7214d47e23f9" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="763b41d1-db33-48f2-8950-357a8a84b74b" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="a1803f50-ceba-4219-b5af-110892cfdac8" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="d2243a07-a11b-4505-9385-8690e80efd91" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="f02959de-42c8-4b87-8f95-f86993d4d0f1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="ca112094-db1d-476c-a763-09a139e225ba" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
@@ -619,6 +619,27 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="bc325536-8476-4b98-bc26-029b556734e9" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="54cde06c-faba-41eb-b935-97abfe1460d0" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="2f8eabb6-d88e-4a2a-95e1-39dc870af69e" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="54cde06c-faba-41eb-b935-97abfe1460d0" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="2f8eabb6-d88e-4a2a-95e1-39dc870af69e" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="c42f1b9a-dbaa-40e8-8de8-e3cd620b1e4d" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
@@ -632,27 +653,6 @@
               <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
             </covered>
           </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="54cde06c-faba-41eb-b935-97abfe1460d0" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="2f8eabb6-d88e-4a2a-95e1-39dc870af69e" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="2f8eabb6-d88e-4a2a-95e1-39dc870af69e" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="bc325536-8476-4b98-bc26-029b556734e9" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="54cde06c-faba-41eb-b935-97abfe1460d0" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
           <proxyExecutionOccurrenceSpecification Id="6ea051d7-f95b-4aaf-ac1a-5b7d7bd8d675" name="ProxyExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -692,50 +692,6 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="6ea051d7-f95b-4aaf-ac1a-5b7d7bd8d675" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="385d60e0-5889-4410-b530-a9f805a02e97" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ba3e6ffc-87db-42e9-ab13-88b2839a15eb" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="a0922cc0-bdc9-48f3-a7d7-f1fd69e0cf82" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="6b558472-779f-44e8-a375-188d2f413b5a" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="24c71240-a723-435d-ac38-be14908e2b7a" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="6b558472-779f-44e8-a375-188d2f413b5a" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="a0922cc0-bdc9-48f3-a7d7-f1fd69e0cf82" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="24c71240-a723-435d-ac38-be14908e2b7a" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="dfe5f5e3-9029-45f5-b9f4-f9aa0330b811" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="5e93a3ff-2a2d-44bf-96f4-4ef3a6219645" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="d002f43d-10b0-42cf-8384-f5ec3947677d" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -787,32 +743,6 @@
               <messageOccurrenceSpecificationMoniker Id="ba3e6ffc-87db-42e9-ab13-88b2839a15eb" LastKnownName="MessageOccurrenceSpecification" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
-          <proxyExecutionOccurrenceSpecification Id="71d6302a-3b0f-4806-8c1a-c1c13df80835" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="3b30752c-0b2a-4ddd-9a5d-566306034537" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="56041f05-718d-488d-af8f-3c003ac22abe" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="9db1626c-382e-417f-b2e1-2c26a83eebbc" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="d4d6e207-a8e4-4fb0-81ef-886b9a634484" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="71d6302a-3b0f-4806-8c1a-c1c13df80835" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="d4779e4f-ab2a-476f-868b-d4aafb281775" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -826,6 +756,94 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="9db1626c-382e-417f-b2e1-2c26a83eebbc" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="9db1626c-382e-417f-b2e1-2c26a83eebbc" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="d4d6e207-a8e4-4fb0-81ef-886b9a634484" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="71d6302a-3b0f-4806-8c1a-c1c13df80835" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="71d6302a-3b0f-4806-8c1a-c1c13df80835" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="3b30752c-0b2a-4ddd-9a5d-566306034537" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="56041f05-718d-488d-af8f-3c003ac22abe" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="6b558472-779f-44e8-a375-188d2f413b5a" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="24c71240-a723-435d-ac38-be14908e2b7a" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="6b558472-779f-44e8-a375-188d2f413b5a" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ba3e6ffc-87db-42e9-ab13-88b2839a15eb" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="a0922cc0-bdc9-48f3-a7d7-f1fd69e0cf82" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="385d60e0-5889-4410-b530-a9f805a02e97" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="a0922cc0-bdc9-48f3-a7d7-f1fd69e0cf82" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="24c71240-a723-435d-ac38-be14908e2b7a" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="dfe5f5e3-9029-45f5-b9f4-f9aa0330b811" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="5e93a3ff-2a2d-44bf-96f4-4ef3a6219645" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="fc677908-4457-4527-8657-fb4aec34bba0" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <proxyOperandOccurrenceSpecification Id="d7daa968-fcfb-4549-813f-be51ee85a2a2" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyOperandOccurrenceSpecificationMoniker Id="5a73fa9f-e15a-48e6-acd7-4b3546fb4c24" />
+            </proxyOccurrenceSpecification>
+          </proxyOperandOccurrenceSpecification>
+          <proxyOperandOccurrenceSpecification Id="5a73fa9f-e15a-48e6-acd7-4b3546fb4c24" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyOperandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="ba8a7dc8-a4f8-4fcb-999b-027f00023747" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="14c70b5e-e528-4e46-847e-bdb391e5e84f" LastKnownName="c : Card" />
@@ -842,50 +860,6 @@
               <proxyOperandOccurrenceSpecificationMoniker Id="d7daa968-fcfb-4549-813f-be51ee85a2a2" />
             </proxyOccurrenceSpecification>
           </proxyOperandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="d7daa968-fcfb-4549-813f-be51ee85a2a2" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyOperandOccurrenceSpecificationMoniker Id="5a73fa9f-e15a-48e6-acd7-4b3546fb4c24" />
-            </proxyOccurrenceSpecification>
-          </proxyOperandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="5a73fa9f-e15a-48e6-acd7-4b3546fb4c24" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyOperandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="fc677908-4457-4527-8657-fb4aec34bba0" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="d2f2e951-e91b-4a7b-9aae-a5f4bba39fb9" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="21dfb199-825d-4726-9513-355076d29a50" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="3b405b72-93ad-46e8-b615-04673faae22b" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="3b405b72-93ad-46e8-b615-04673faae22b" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="147a3beb-e3e9-48e4-9429-abf9f4b159d2" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="dfe5f5e3-9029-45f5-b9f4-f9aa0330b811" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="98040683-8ef5-44cf-be9a-a5e2a83eb3c4" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -899,6 +873,32 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="d2f2e951-e91b-4a7b-9aae-a5f4bba39fb9" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="3b405b72-93ad-46e8-b615-04673faae22b" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="147a3beb-e3e9-48e4-9429-abf9f4b159d2" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="dfe5f5e3-9029-45f5-b9f4-f9aa0330b811" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="d2f2e951-e91b-4a7b-9aae-a5f4bba39fb9" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="21dfb199-825d-4726-9513-355076d29a50" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="3b405b72-93ad-46e8-b615-04673faae22b" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="1a3de36d-ce18-4088-b156-a81bf7bdcc9c" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -1041,22 +1041,6 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyExecutionOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="e6f4e6a7-6df4-411d-8d96-30fdafa34298" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="7306e320-0888-492e-819f-af9c810e7d35" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="7306e320-0888-492e-819f-af9c810e7d35" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="54e7fd33-3047-4532-9c3e-e4425aa54f35" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="c0e352e9-44a1-4ea6-831e-1d6105367a93" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
@@ -1065,6 +1049,22 @@
               <proxyMessageOccurrenceSpecificationMoniker Id="e6f4e6a7-6df4-411d-8d96-30fdafa34298" />
             </proxyOccurrenceSpecification>
           </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="7306e320-0888-492e-819f-af9c810e7d35" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="54e7fd33-3047-4532-9c3e-e4425aa54f35" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="e6f4e6a7-6df4-411d-8d96-30fdafa34298" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="7306e320-0888-492e-819f-af9c810e7d35" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="b01fb48f-2e96-4ea6-a364-c429d5cab9d3" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
@@ -1075,65 +1075,6 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b90669f7-ac7d-43ca-85b2-ed8bf0ca405a" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="65da96ad-39f7-4499-852e-3d1200f55c4e" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="f391561a-b9a1-4722-873f-4fc31b8af28d" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="75a23b16-b7a9-4d89-b982-e068f4268b09" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="65da96ad-39f7-4499-852e-3d1200f55c4e" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="f391561a-b9a1-4722-873f-4fc31b8af28d" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="dca55b56-f60b-4ce6-be02-10908330c6a3" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="dca55b56-f60b-4ce6-be02-10908330c6a3" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="809c0772-ecb8-4177-b8b6-6dd705d43698" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="65e7f3b0-cfdb-4de4-ad2d-72feabc01380" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
-          <behaviorExecutionSpecification Id="a9c6181e-72bd-4fb7-a9ac-3ad6c02acad2" name="BehaviorExecutionSpecification">
-            <coveredLifelines>
-              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker Id="246db9da-bff4-4528-982f-94ef39e90f87" LastKnownName="ExecutionOccurrenceSpecification" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker Id="b64e37a7-300a-4372-815d-97803b595fdb" LastKnownName="ExecutionOccurrenceSpecification" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker Id="c0e352e9-44a1-4ea6-831e-1d6105367a93" LastKnownName="MessageOccurrenceSpecification" />
-              <messageOccurrenceSpecificationMoniker Id="75a23b16-b7a9-4d89-b982-e068f4268b09" LastKnownName="MessageOccurrenceSpecification" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
           <proxyBehaviorExecutionSpecification Id="e8304b5b-4e2e-4f63-8097-792a5856c395" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -1170,19 +1111,21 @@
               <behaviorExecutionSpecificationMoniker Id="a9c6181e-72bd-4fb7-a9ac-3ad6c02acad2" LastKnownName="BehaviorExecutionSpecification" />
             </behaviorExecutionSpecification>
           </proxyBehaviorExecutionSpecification>
-          <proxyExecutionOccurrenceSpecification Id="d7ff9604-f73f-4bf8-8251-1b8c264899d5" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="4aba54c7-aa99-451f-8026-8a639e7b6095" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="f6558c81-885c-47b8-81a6-4288ea251668" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="a9c6181e-72bd-4fb7-a9ac-3ad6c02acad2" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="246db9da-bff4-4528-982f-94ef39e90f87" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="b64e37a7-300a-4372-815d-97803b595fdb" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="c0e352e9-44a1-4ea6-831e-1d6105367a93" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="75a23b16-b7a9-4d89-b982-e068f4268b09" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification Id="b64e37a7-300a-4372-815d-97803b595fdb" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -1196,6 +1139,19 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="05ea461b-601d-40c8-974c-e99d678de5b5" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="d7ff9604-f73f-4bf8-8251-1b8c264899d5" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="4aba54c7-aa99-451f-8026-8a639e7b6095" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="f6558c81-885c-47b8-81a6-4288ea251668" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
           <proxyExecutionOccurrenceSpecification Id="05ea461b-601d-40c8-974c-e99d678de5b5" name="ProxyExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -1208,6 +1164,50 @@
             <proxyOccurrenceSpecification>
               <proxyExecutionOccurrenceSpecificationMoniker Id="d7ff9604-f73f-4bf8-8251-1b8c264899d5" />
             </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b90669f7-ac7d-43ca-85b2-ed8bf0ca405a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="65da96ad-39f7-4499-852e-3d1200f55c4e" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="f391561a-b9a1-4722-873f-4fc31b8af28d" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="75a23b16-b7a9-4d89-b982-e068f4268b09" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="65da96ad-39f7-4499-852e-3d1200f55c4e" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="dca55b56-f60b-4ce6-be02-10908330c6a3" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="f391561a-b9a1-4722-873f-4fc31b8af28d" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="dca55b56-f60b-4ce6-be02-10908330c6a3" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="809c0772-ecb8-4177-b8b6-6dd705d43698" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="65e7f3b0-cfdb-4de4-ad2d-72feabc01380" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
           </proxyExecutionOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="644b602e-8b46-4bd6-94d1-b6dc79793454" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
@@ -1237,27 +1237,6 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyExecutionOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="df7cab3a-2664-46a3-90a8-71f1d062d86e" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="752f87bd-8881-42c0-9268-b15e1ba1f663" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="40869b7c-d335-4313-aa7b-5b90da62c23d" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="0d03e1ad-3732-4ae8-871a-25c241df8639" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="752f87bd-8881-42c0-9268-b15e1ba1f663" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="6b9b3598-f0c7-4ea6-a195-701c8b4031a8" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
@@ -1271,19 +1250,27 @@
               <proxyMessageOccurrenceSpecificationMoniker Id="df7cab3a-2664-46a3-90a8-71f1d062d86e" />
             </proxyOccurrenceSpecification>
           </proxyMessageOccurrenceSpecification>
-          <executionOccurrenceSpecification Id="246db9da-bff4-4528-982f-94ef39e90f87" name="ExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="bb659e05-bd39-424b-9ae1-c7ab03ecafba" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
+          <messageOccurrenceSpecification Id="40869b7c-d335-4313-aa7b-5b90da62c23d" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
             </covered>
             <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="e78d2890-64e3-4942-acfe-7fb34a0abb56" />
+              <proxyMessageOccurrenceSpecificationMoniker Id="0d03e1ad-3732-4ae8-871a-25c241df8639" />
             </proxyOccurrenceSpecification>
-          </executionOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="df7cab3a-2664-46a3-90a8-71f1d062d86e" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="752f87bd-8881-42c0-9268-b15e1ba1f663" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="752f87bd-8881-42c0-9268-b15e1ba1f663" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
           <proxyExecutionOccurrenceSpecification Id="0e404190-85b3-4d37-a106-d188f50cc944" name="ProxyExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -1310,50 +1297,19 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="0e404190-85b3-4d37-a106-d188f50cc944" />
             </proxyOccurrenceSpecification>
           </proxyExecutionOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="b7f0c1fa-6050-4013-b583-79961c75b314" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="7ee92d74-acd2-47ce-9a90-356d4f1a47c9" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="8627be14-ae07-4294-8a79-ba2d29e1bb00" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="7ee92d74-acd2-47ce-9a90-356d4f1a47c9" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="af511d3a-d63c-4012-b1fd-b16ebb84b20e" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="b7f0c1fa-6050-4013-b583-79961c75b314" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="6408f0d3-a5cb-441f-bfc4-31f809d62764" name="MessageOccurrenceSpecification">
+          <executionOccurrenceSpecification Id="246db9da-bff4-4528-982f-94ef39e90f87" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="bb659e05-bd39-424b-9ae1-c7ab03ecafba" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
             <covered>
               <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
             </covered>
             <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="af511d3a-d63c-4012-b1fd-b16ebb84b20e" />
+              <proxyExecutionOccurrenceSpecificationMoniker Id="e78d2890-64e3-4942-acfe-7fb34a0abb56" />
             </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="73fb34f2-a18e-42be-8cb6-671c086557bc" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="e204c0d4-e2ce-4069-ade0-eebc0b6b114f" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
+          </executionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="c3acc460-02fe-4639-be17-d0e1ea7692c2" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
@@ -1444,20 +1400,56 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="fcd41e3d-6232-43ca-8310-5411d152054c" />
             </proxyOccurrenceSpecification>
           </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="af511d3a-d63c-4012-b1fd-b16ebb84b20e" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="b7f0c1fa-6050-4013-b583-79961c75b314" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="7ee92d74-acd2-47ce-9a90-356d4f1a47c9" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6408f0d3-a5cb-441f-bfc4-31f809d62764" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e06e9475-41be-4719-845f-4798d833addd" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="af511d3a-d63c-4012-b1fd-b16ebb84b20e" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="b7f0c1fa-6050-4013-b583-79961c75b314" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="7ee92d74-acd2-47ce-9a90-356d4f1a47c9" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8627be14-ae07-4294-8a79-ba2d29e1bb00" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="a71cf81b-e070-449f-84f4-7d99e0043072" LastKnownName="v : Console" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="73fb34f2-a18e-42be-8cb6-671c086557bc" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="e204c0d4-e2ce-4069-ade0-eebc0b6b114f" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
           <proxyOperandOccurrenceSpecification Id="79a2588f-3874-49d3-a87c-af03a7c0aef8" name="ProxyOperandOccurrenceSpecification">
             <covered>
               <proxyLifelineMoniker Id="9585a59e-7010-4ce9-ac3d-a1c2aa73fee0" />
             </covered>
             <proxyOccurrenceSpecification>
               <proxyOperandOccurrenceSpecificationMoniker Id="93db927f-a142-40a2-8dec-6cb9e0f25455" />
-            </proxyOccurrenceSpecification>
-          </proxyOperandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="93db927f-a142-40a2-8dec-6cb9e0f25455" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyOperandOccurrenceSpecificationMoniker Id="3df1051a-9bc6-4aa6-9168-e9c46f30cf2f" />
             </proxyOccurrenceSpecification>
           </proxyOperandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="00b45dd3-ab87-44bf-b5f1-d94be1057d33" name="OperandOccurrenceSpecification">
@@ -1473,6 +1465,14 @@
               <proxyOperandOccurrenceSpecificationMoniker Id="79a2588f-3874-49d3-a87c-af03a7c0aef8" />
             </proxyOccurrenceSpecification>
           </operandOccurrenceSpecification>
+          <proxyOperandOccurrenceSpecification Id="93db927f-a142-40a2-8dec-6cb9e0f25455" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyOperandOccurrenceSpecificationMoniker Id="3df1051a-9bc6-4aa6-9168-e9c46f30cf2f" />
+            </proxyOccurrenceSpecification>
+          </proxyOperandOccurrenceSpecification>
           <proxyOperandOccurrenceSpecification Id="3df1051a-9bc6-4aa6-9168-e9c46f30cf2f" name="ProxyOperandOccurrenceSpecification">
             <covered>
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
@@ -1870,42 +1870,6 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="fc962de3-5d4c-47ab-b22f-c6df86b7960d" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="5f26708e-6413-4439-abea-a00d678cf5b0" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="59de9723-e975-44eb-b2f7-e64090036495" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ef9008e9-3b76-4d15-92a2-2f25c2816ea2" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="59de9723-e975-44eb-b2f7-e64090036495" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="59c11174-3690-485b-b620-6bb8e3a6d202" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="59c11174-3690-485b-b620-6bb8e3a6d202" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="e5ae50fd-d138-4b44-a590-07611fabe07f" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="deb91051-28c5-401d-aafd-84ae90fb67c4" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="57e778c5-a708-4e56-94de-63578a6fc1f3" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="5f26708e-6413-4439-abea-a00d678cf5b0" LastKnownName="c : Card" />
@@ -1939,19 +1903,6 @@
               <behaviorExecutionSpecificationMoniker Id="57e778c5-a708-4e56-94de-63578a6fc1f3" LastKnownName="BehaviorExecutionSpecification" />
             </behaviorExecutionSpecification>
           </proxyBehaviorExecutionSpecification>
-          <proxyExecutionOccurrenceSpecification Id="6c1fc565-2408-4726-91ad-bfaeedc9815f" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="4fb8457d-9b26-43f1-926f-06f5e9a56d48" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="af1496fb-d001-452a-a4e0-97376c84012f" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="642bdb59-a9f8-4d0d-8e9f-52f408367085" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -1965,6 +1916,55 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="6c1fc565-2408-4726-91ad-bfaeedc9815f" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="6c1fc565-2408-4726-91ad-bfaeedc9815f" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="4fb8457d-9b26-43f1-926f-06f5e9a56d48" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="af1496fb-d001-452a-a4e0-97376c84012f" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="fc962de3-5d4c-47ab-b22f-c6df86b7960d" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="5f26708e-6413-4439-abea-a00d678cf5b0" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="59de9723-e975-44eb-b2f7-e64090036495" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="59c11174-3690-485b-b620-6bb8e3a6d202" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="59de9723-e975-44eb-b2f7-e64090036495" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="59c11174-3690-485b-b620-6bb8e3a6d202" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ef9008e9-3b76-4d15-92a2-2f25c2816ea2" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="e5ae50fd-d138-4b44-a590-07611fabe07f" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="deb91051-28c5-401d-aafd-84ae90fb67c4" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="2ebe62e5-4557-41aa-8433-26dc701ef7da" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="e20537fb-6606-469d-941b-8053d1de39d4" LastKnownName="p : Player" />
@@ -2129,19 +2129,6 @@
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyExecutionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="ce282cc9-fb71-4f94-ae7b-1317a64cb329" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="466c7745-cde2-4fc1-9e18-b0ce05cc9129" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="a868192a-14ae-4f51-b771-347827d6cef0" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
           <proxyMessageOccurrenceSpecification Id="466c7745-cde2-4fc1-9e18-b0ce05cc9129" name="ProxyMessageOccurrenceSpecification">
             <covered>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -2150,47 +2137,24 @@
               <proxyMessageOccurrenceSpecificationMoniker Id="be53f6dc-5339-454e-b7f2-9f812c5c1dd2" />
             </proxyOccurrenceSpecification>
           </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="a868192a-14ae-4f51-b771-347827d6cef0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+            </covered>
+          </messageOccurrenceSpecification>
           <proxyMessageOccurrenceSpecification Id="be53f6dc-5339-454e-b7f2-9f812c5c1dd2" name="ProxyMessageOccurrenceSpecification">
             <covered>
               <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
             </covered>
           </proxyMessageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="db949bd2-c4dd-4fe6-bdc4-bda5b2cd55f2" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="3c3f3a78-81da-4bd9-8178-d5b01a12e9b3" />
-            </proxyOccurrenceSpecification>
-          </proxyMessageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="d5ac3996-3df1-4d4f-aadc-6f3644f4deb5" name="MessageOccurrenceSpecification">
+          <messageOccurrenceSpecification Id="ce282cc9-fb71-4f94-ae7b-1317a64cb329" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
             </covered>
             <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="db949bd2-c4dd-4fe6-bdc4-bda5b2cd55f2" />
+              <proxyMessageOccurrenceSpecificationMoniker Id="466c7745-cde2-4fc1-9e18-b0ce05cc9129" />
             </proxyOccurrenceSpecification>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="58b38034-edc3-45aa-ad65-91420812f989" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="3c3f3a78-81da-4bd9-8178-d5b01a12e9b3" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="d6640a6d-6a2f-4649-b6bc-6f9e827075f6" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="ea61e3f5-12e1-42b9-9676-2e1040c6efad" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
           <proxyBehaviorExecutionSpecification Id="39dd1fc9-126d-4110-bfaa-c584196b60b6" name="ProxyBehaviorExecutionSpecification">
             <coveredLifelines>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -2250,11 +2214,73 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="53597c64-691e-4fd0-bc97-c5343055b371" />
             </proxyOccurrenceSpecification>
           </proxyExecutionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="db949bd2-c4dd-4fe6-bdc4-bda5b2cd55f2" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="3c3f3a78-81da-4bd9-8178-d5b01a12e9b3" />
+            </proxyOccurrenceSpecification>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d5ac3996-3df1-4d4f-aadc-6f3644f4deb5" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="db949bd2-c4dd-4fe6-bdc4-bda5b2cd55f2" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="58b38034-edc3-45aa-ad65-91420812f989" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="3c3f3a78-81da-4bd9-8178-d5b01a12e9b3" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="d6640a6d-6a2f-4649-b6bc-6f9e827075f6" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="ea61e3f5-12e1-42b9-9676-2e1040c6efad" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="2f9b10c4-b889-4477-b523-c6753ddebbce" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="36ac927e-dd9a-4ca4-8080-dbdbab9da66d" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="2fb243d6-c81a-4a62-91da-0c99611be241" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="a369f337-97bb-4c73-94bd-8b076e5c5b8c" />
+            </proxyOccurrenceSpecification>
+          </executionOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="a369f337-97bb-4c73-94bd-8b076e5c5b8c" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="86ece029-e973-4131-80f7-797e415526d1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyExecutionOccurrenceSpecificationMoniker Id="d6640a6d-6a2f-4649-b6bc-6f9e827075f6" />
+            </proxyOccurrenceSpecification>
+          </proxyExecutionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="b3da5aaa-6edf-4560-89fe-41d5a2f58cd8" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
@@ -2284,32 +2310,6 @@
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="a369f337-97bb-4c73-94bd-8b076e5c5b8c" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="86ece029-e973-4131-80f7-797e415526d1" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="d6640a6d-6a2f-4649-b6bc-6f9e827075f6" />
-            </proxyOccurrenceSpecification>
-          </proxyExecutionOccurrenceSpecification>
-          <executionOccurrenceSpecification Id="36ac927e-dd9a-4ca4-8080-dbdbab9da66d" name="ExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="2fb243d6-c81a-4a62-91da-0c99611be241" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyExecutionOccurrenceSpecificationMoniker Id="a369f337-97bb-4c73-94bd-8b076e5c5b8c" />
-            </proxyOccurrenceSpecification>
-          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="0d346e3b-0c78-4191-b092-b57b4f1c5255" name="ExecutionOccurrenceSpecification">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
@@ -2355,14 +2355,14 @@
               <lifelineMoniker Id="4f22ab03-815d-4a9e-a260-1dc430005e7e" LastKnownName="d.m_deck : Deck" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b93b6be2-5de3-4fed-ae0e-9b9cc360c368" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="f3cc7f04-907b-458d-a349-7ec20dceffb4" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="4f22ab03-815d-4a9e-a260-1dc430005e7e" LastKnownName="d.m_deck : Deck" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b93b6be2-5de3-4fed-ae0e-9b9cc360c368" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="b73033ec-0bbf-4ce6-b2de-32a1015e1bca" name="ExecutionOccurrenceSpecification">
@@ -2421,34 +2421,6 @@
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="bbd6ead5-b759-4216-a043-ae5d8920ad75" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="8bd10a7e-d242-4f13-8932-65c8db949d92" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyMessageOccurrenceSpecificationMoniker Id="f5886566-b5d9-467d-b44a-6762c4bbd6a0" />
-            </proxyOccurrenceSpecification>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="894d5b65-68af-4342-b6c5-a5b1aadedce4" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <proxyMessageOccurrenceSpecification Id="f5886566-b5d9-467d-b44a-6762c4bbd6a0" name="ProxyMessageOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyMessageOccurrenceSpecification>
-          <proxyExecutionOccurrenceSpecification Id="d3075011-a559-48d3-b992-b1668cea7169" name="ProxyExecutionOccurrenceSpecification">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker Id="880d07ac-2626-4485-80eb-32bf56cb0dc0" LastKnownName="ExecutionEvent" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyExecutionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="67e684a4-dc17-4b12-90db-dcdd1da1f3f0" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="8bd10a7e-d242-4f13-8932-65c8db949d92" LastKnownName="c : Card" />
@@ -2477,6 +2449,34 @@
               <proxyExecutionOccurrenceSpecificationMoniker Id="62f57376-82ee-4fbc-b395-1d86e4c634b8" />
             </proxyOccurrenceSpecification>
           </executionOccurrenceSpecification>
+          <proxyMessageOccurrenceSpecification Id="f5886566-b5d9-467d-b44a-6762c4bbd6a0" name="ProxyMessageOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyMessageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="894d5b65-68af-4342-b6c5-a5b1aadedce4" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bbd6ead5-b759-4216-a043-ae5d8920ad75" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="8bd10a7e-d242-4f13-8932-65c8db949d92" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyMessageOccurrenceSpecificationMoniker Id="f5886566-b5d9-467d-b44a-6762c4bbd6a0" />
+            </proxyOccurrenceSpecification>
+          </messageOccurrenceSpecification>
+          <proxyExecutionOccurrenceSpecification Id="d3075011-a559-48d3-b992-b1668cea7169" name="ProxyExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="880d07ac-2626-4485-80eb-32bf56cb0dc0" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyExecutionOccurrenceSpecification>
           <behaviorExecutionSpecification Id="74701956-d65f-452b-a091-db696ceccd66" name="BehaviorExecutionSpecification">
             <coveredLifelines>
               <lifelineMoniker Id="e20537fb-6606-469d-941b-8053d1de39d4" LastKnownName="p : Player" />
@@ -2580,14 +2580,14 @@
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="a9277b90-f6a0-472a-899c-61dd3f0619c2" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="a41f5f67-3488-49ee-b70b-e81572fa21a6" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="4f22ab03-815d-4a9e-a260-1dc430005e7e" LastKnownName="d.m_deck : Deck" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="a9277b90-f6a0-472a-899c-61dd3f0619c2" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="74b12490-937d-492b-95ab-d1d3daa3e60f" name="ExecutionOccurrenceSpecification">
@@ -2664,42 +2664,6 @@
               <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="672f79eb-3f33-4d56-96b1-8f02fa5ecba6" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyOperandOccurrenceSpecificationMoniker Id="c7091a6a-ea56-4d5a-9f41-9c4faf6e6a54" />
-            </proxyOccurrenceSpecification>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="7b978781-bb2a-437d-9c55-16249138b7d4" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="e20537fb-6606-469d-941b-8053d1de39d4" LastKnownName="p : Player" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <proxyOperandOccurrenceSpecification Id="eb71b9a9-a4b3-480d-af23-0a286201a0a8" name="ProxyOperandOccurrenceSpecification">
-            <covered>
-              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
-            </covered>
-          </proxyOperandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="19df4cf3-2e7a-44d5-a434-0b83ce2a6845" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="5f26708e-6413-4439-abea-a00d678cf5b0" LastKnownName="c : Card" />
-            </covered>
-            <proxyOccurrenceSpecification>
-              <proxyOperandOccurrenceSpecificationMoniker Id="c7091a6a-ea56-4d5a-9f41-9c4faf6e6a54" />
-            </proxyOccurrenceSpecification>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="576e93ee-2add-4bc8-b050-351cdd67d1da" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="4f22ab03-815d-4a9e-a260-1dc430005e7e" LastKnownName="d.m_deck : Deck" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="0cbf1e43-8eb8-48d4-a5a0-63ab91ed1ba1" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
-            </covered>
-          </operandOccurrenceSpecification>
           <proxyOperandOccurrenceSpecification Id="c7091a6a-ea56-4d5a-9f41-9c4faf6e6a54" name="ProxyOperandOccurrenceSpecification">
             <covered>
               <proxyLifelineMoniker Id="f6a1eefe-b68e-4b23-a27b-5306032874e4" />
@@ -2708,10 +2672,46 @@
               <proxyOperandOccurrenceSpecificationMoniker Id="eb71b9a9-a4b3-480d-af23-0a286201a0a8" />
             </proxyOccurrenceSpecification>
           </proxyOperandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="0cbf1e43-8eb8-48d4-a5a0-63ab91ed1ba1" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="82c91860-1e47-4a76-ad18-7b5691746494" LastKnownName="d : Dealer" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="576e93ee-2add-4bc8-b050-351cdd67d1da" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="4f22ab03-815d-4a9e-a260-1dc430005e7e" LastKnownName="d.m_deck : Deck" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="7b7e3dfa-2f07-4221-92fd-e373bacb1122" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="a68b5080-ed4c-4555-ab91-307f61a5e697" LastKnownName="c : Player" />
             </covered>
+          </operandOccurrenceSpecification>
+          <proxyOperandOccurrenceSpecification Id="eb71b9a9-a4b3-480d-af23-0a286201a0a8" name="ProxyOperandOccurrenceSpecification">
+            <covered>
+              <proxyLifelineMoniker Id="b64cfe11-2422-47cc-a11d-f71dbcc62456" />
+            </covered>
+          </proxyOperandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="7b978781-bb2a-437d-9c55-16249138b7d4" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e20537fb-6606-469d-941b-8053d1de39d4" LastKnownName="p : Player" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="672f79eb-3f33-4d56-96b1-8f02fa5ecba6" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="c0ef7563-844e-42c0-b5d5-dd3c5d78a6b2" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyOperandOccurrenceSpecificationMoniker Id="c7091a6a-ea56-4d5a-9f41-9c4faf6e6a54" />
+            </proxyOccurrenceSpecification>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="19df4cf3-2e7a-44d5-a434-0b83ce2a6845" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="5f26708e-6413-4439-abea-a00d678cf5b0" LastKnownName="c : Card" />
+            </covered>
+            <proxyOccurrenceSpecification>
+              <proxyOperandOccurrenceSpecificationMoniker Id="c7091a6a-ea56-4d5a-9f41-9c4faf6e6a54" />
+            </proxyOccurrenceSpecification>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="9f5295a0-a33f-4b51-88a0-b5ab2ef453b3" name="OperandOccurrenceSpecification">
             <covered>

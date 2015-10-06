@@ -32,7 +32,8 @@ namespace BlackJack.model
 			return c;
 		}
 
-		public void Add(Card a_card) {
+		public void Add(Card a_card)
+		{
 			m_cards.Add(a_card);
 		}
 

@@ -6,45 +6,78 @@ using System.Threading.Tasks;
 
 namespace BlackJack.model
 {
-	class Dealer
+	class Dealer : Player
 	{
 		private Deck m_deck;
-		List<Card> m_hand;
+		private rules.StartNewGameStrategy m_startGameRule;
 
-
-		public Dealer()
+		public Dealer(rules.ConcreteRules.RuleFactory a_rules)
 		{
-			m_hand = new List<Card>();
-			m_deck = new Deck();
-			m_deck.Shuffle();
+			m_deck = null;
+			m_startGameRule = a_rules.GetStartNewGameRule();
+			//m_startGameRule = new rules.EuroStartNewGameStrategy();
 		}
 
 		public void StartNewRound(Player a_player)
 		{
-			Card c = m_deck.GetCard();
-			c.Show();
-			a_player.DealCard(c);
-
-			c = m_deck.GetCard();
-			c.Show();
-			DealCard(c);
-
-			c = m_deck.GetCard();
-			c.Show();
-			a_player.DealCard(c);
-
-			c = m_deck.GetCard();
-			DealCard(c);
+			if (m_deck == null)
+			{
+				m_deck = new Deck();
+				m_startGameRule.StartNewRound(a_player, this, m_deck);
+			}
 		}
 
-		public void DealCard(Card a_card)
+		public void Stand()
 		{
-			m_hand.Add(a_card);
+			if (m_deck != null)
+			{
+				ShowHand();
+				while (GetScoreOfHand() <= 16)
+				{
+					Card c = m_deck.GetCard();
+					c.Show();
+					DealCard(c);
+				}
+
+				m_deck = null;
+			}
 		}
 
-		public  IEnumerable<Card> GetHand()
+		public bool IsGameOver()
 		{
-			return (IEnumerable<Card>)m_hand.AsEnumerable();
+			return m_deck == null && GetScoreOfHand() > 0;
+		}
+
+		public bool IsPlayerWinner(Player a_player)
+		{
+			int myScore = GetScoreOfHand();
+			int playerScore = a_player.GetScoreOfHand();
+
+			if (playerScore > 21)
+			{
+				return false;
+			}
+			if (myScore > 21)
+			{
+				return true;
+			}
+
+			if (playerScore >= myScore)
+			{
+				return true;
+			}
+
+			return false;
+		}
+
+		public void HitPlayer(Player a_player)
+		{
+			if (m_deck != null && a_player.GetScoreOfHand() < 21)
+			{
+				Card c = m_deck.GetCard();
+				c.Show();
+				a_player.DealCard(c);
+			}
 		}
 	}
 }

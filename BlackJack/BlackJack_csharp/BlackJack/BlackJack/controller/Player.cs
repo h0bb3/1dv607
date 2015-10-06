@@ -8,10 +8,15 @@ namespace BlackJack.controller
 {
 	class Player
 	{
-		public bool PlayGame(view.Console a_view, model.Dealer a_dealer, model.Player a_player)
+		public bool PlayGame(view.Console a_view, model.GameFacade a_game)
 		{
 			a_view.PresentInstructions();
-			a_view.DisplayHands(a_dealer.GetHand(), a_player.GetHand());
+			a_view.DisplayHands(a_game.GetDealerHand(), a_game.GetDealerScore(), a_game.GetPlayerHand(), a_game.GetPlayerScore());
+			if (a_game.IsGameOver())
+			{
+				a_view.DisplayWinner(a_game.IsPlayerWinner());
+			}
+			
 			view.Console.Event e;
 
 			e = a_view.GetEvent();
@@ -21,8 +26,16 @@ namespace BlackJack.controller
 			}
 			if (e == view.Console.Event.Start)
 			{
-				a_dealer.StartNewRound(a_player);
+				a_game.StartNewRound();
 				
+			}
+			if (e == view.Console.Event.Hit)
+			{
+				a_game.Hit();
+			}
+			if (e == view.Console.Event.Stand)
+			{
+				a_game.Stand();
 			}
 
 			return true;

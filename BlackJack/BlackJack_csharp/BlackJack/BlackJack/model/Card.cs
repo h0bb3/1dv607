@@ -37,7 +37,7 @@ namespace BlackJack.model
 
 		Color m_color;
 		Value m_value;
-		bool m_isHidden;
+		bool m_isHidden; 
 
 		public Card(Color a_color, Value a_value)
 		{

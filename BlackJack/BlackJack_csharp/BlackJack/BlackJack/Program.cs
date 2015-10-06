@@ -10,13 +10,12 @@ namespace BlackJack
 	{
 		static void Main(string[] args)
 		{
-			model.Dealer d = new model.Dealer();
-			model.Player p = new model.Player();
+			model.GameFacade g = new model.GameFacade();
 			view.Console v = new view.Console();
 			controller.Player c = new controller.Player();
 
 
-			while (c.PlayGame(v, d, p)) ;
+			while (c.PlayGame(v, g)) ;
 		}
 	}
 }
