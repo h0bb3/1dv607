@@ -1,4 +1,4 @@
-namespace model;
+package model;
 
 public class Dice {
   
