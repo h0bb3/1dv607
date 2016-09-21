@@ -1,19 +1,6 @@
 package view;
 
-public class SweConsole implements IView {
-  private int getInputChar() {
-    try {
-      int c = System.in.read();
-      while (c == '\r' || c =='\n') {
-        c = System.in.read();
-      }
-      return c;
-    } catch (java.io.IOException e) {
-      System.out.println("" + e);
-      return 0;
-    }
-  }
-  
+public class SweConsole extends BaseConsole implements IView {  
   public boolean wantsToPlay() {
     return getInputChar() != 'a';
   }
@@ -32,9 +19,5 @@ public class SweConsole implements IView {
   
   public void DisplayInstructions() {
     System.out.println("Truck en tangent för att spela eller 'a' för att avsluta");
-  }
-  
-  public void DisplayDice(int a_faceValue) {
-    System.out.println("" + a_faceValue);
   }
 }

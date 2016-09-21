@@ -3,12 +3,14 @@ package model;
 public class DiceGame {
   private Dice m_d1;
   private Dice m_d2;
+  private Dice m_d3;
   
   private java.util.ArrayList<IDiceRolledObserver> m_subscribers;
   
   public DiceGame() {
     m_d1 = new Dice();
     m_d2 = new Dice();
+    m_d3 = new Dice();
     m_subscribers = new java.util.ArrayList<IDiceRolledObserver>();
   }
   
@@ -16,22 +18,23 @@ public class DiceGame {
     m_subscribers.add(a_sub);
   }
   
-  public boolean play() {
-    
-    m_d1.roll();
+  private void rollDice(Dice a_dice) {
+    a_dice.roll();
     for(IDiceRolledObserver obs : m_subscribers) {
-      obs.DiceRolled(m_d1.getValue());
+      obs.DiceRolled(a_dice.getValue());
     }
     try {
       Thread.sleep(2000);
     } catch (Exception e) {
     }
+  }
+  
+  public boolean play() {
     
-    m_d2.roll();
-    for(IDiceRolledObserver obs : m_subscribers) {
-      obs.DiceRolled(m_d2.getValue());
-    }
+    rollDice(m_d1);
+    rollDice(m_d2);
+    rollDice(m_d3);
     
-    return m_d1.getValue() + m_d2.getValue() == 7;
+    return m_d1.getValue() + m_d2.getValue() + m_d3.getValue() == 9;
   }
 }
