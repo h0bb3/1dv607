@@ -17,6 +17,12 @@ public class Deck {
     }
   }
   
+  public Card getTopCard() {
+    Card c = m_cards.get(0);
+    m_cards.remove(0);
+    return c;
+  }
+  
   private Card getRandomCard() {
     int index = (int)(Math.random() * 171717.0) % m_cards.size();
     Card c = m_cards.get(index);
