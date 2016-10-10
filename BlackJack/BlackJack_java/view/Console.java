@@ -17,26 +17,41 @@ public class Console {
     }
   }
   
-  public void presentInstructions() {
+  public void presentInstructions(boolean a_gameStarted) {
     System.out.println("=======================================================");
     System.out.println("Hello Black Jack World");
-    System.out.println("p to start a new game, h to hit, s to stand, q to quit");
+    if (a_gameStarted) {
+      System.out.println("h to hit, s to stand, q to quit");
+    } else {
+      System.out.println("p to start a new game, q to quit");
+    }
+    System.out.println("-------------------------------------------------------");
   }
   
-  private void presentHand(String a_start, Iterable<model.Card> a_hand) {
-    System.out.println(a_start);
-    for(model.Card c : a_hand) {
-      System.out.println("" + c.getValue() + " of " + c.getColor());
-    }  
-    System.out.println("");
+  private void presentHand(String a_start, int a_score, Iterable<model.Card> a_hand) {
+    if (a_score > 0) {
+      System.out.println(a_start + " " + a_score);
+      for(model.Card c : a_hand) {
+        System.out.println("" + c.getValue() + " of " + c.getColor());
+      }  
+      System.out.println("");
+    }
   }
   
-  public void presentDealerHand(Iterable<model.Card> a_hand) {
-    presentHand("Dealer: ", a_hand);
+  public void presentWinner(boolean a_isDealerWinner) {
+    if (a_isDealerWinner) {
+      System.out.println("* Dealer Won! *");
+    } else {
+      System.out.println("* Player Won! *");
+    }
   }
   
-  public void presentPlayerHand(Iterable<model.Card> a_hand) {
-    presentHand("Player: ", a_hand);
+  public void presentDealerHand(int a_score, Iterable<model.Card> a_hand) {
+    presentHand("Dealer: ", a_score, a_hand);
+  }
+  
+  public void presentPlayerHand(int a_score, Iterable<model.Card> a_hand) {
+    presentHand("Player: ", a_score, a_hand);
   }
   
   public void collectEvents() {
@@ -45,6 +60,14 @@ public class Console {
   
   public boolean wantsToStartNewGame() {
     return m_input == 'p';
+  }
+  
+  public boolean wantsToHit() {
+    return m_input == 'h';
+  }
+  
+  public boolean wantsToStand() {
+    return m_input == 's';
   }
   
   public boolean wantsToQuit() {
