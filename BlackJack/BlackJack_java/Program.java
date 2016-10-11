@@ -2,7 +2,9 @@ public class Program {
 
   public static void main(String[] a_args) {
   
-    model.Dealer d = new model.AmericanDealer();
+    model.rules.IStartNewGameStrategy rule = new model.rules.AmericanNewGameStrategy();
+    
+    model.Dealer d = new model.Dealer(rule);
     model.Player p = new model.Player();
     
     view.Console v = new view.Console();

@@ -1,5 +1,5 @@
 package model;
-
+/*
 public class AmericanDealer extends Dealer {
   public void startGame(Player a_player) {
     if (isGameOver() || getScore() == 0) {
@@ -24,4 +24,4 @@ public class AmericanDealer extends Dealer {
       dealCard(c);
     }
   }
-}
+}*/

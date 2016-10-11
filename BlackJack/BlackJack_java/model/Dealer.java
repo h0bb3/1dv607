@@ -3,14 +3,16 @@ package model;
 import java.util.LinkedList;
 import java.util.Iterator;
 
-public abstract class Dealer extends Player {
+public class Dealer extends Player {
 
   protected Deck m_deck;
+  model.rules.IStartNewGameStrategy m_rule;
 
   
   
-  public Dealer() {
+  public Dealer(model.rules.IStartNewGameStrategy a_rule) {
     m_deck = null;
+    m_rule = a_rule;
   }
   
   public boolean isGameOver() {
@@ -58,5 +60,15 @@ public abstract class Dealer extends Player {
     }
   }
   
-  public abstract void startGame(Player a_player);
+  public void startGame(Player a_player) {
+    if (isGameOver() || getScore() == 0) {
+      m_deck = new Deck();
+      m_deck.shuffle();
+      clearHand();
+      a_player.clearHand();
+      
+      
+      m_rule.startGame(a_player, this, m_deck);
+    }
+  }
 }
