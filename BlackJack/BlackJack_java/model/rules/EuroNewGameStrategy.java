@@ -1,6 +1,6 @@
 package model.rules;
 
-public class EuroNewGameStrategy implements IStartNewGameStrategy {
+class EuroNewGameStrategy implements IStartNewGameStrategy {
   
   public void startGame(model.Player a_player, model.Player a_dealer, model.Deck a_deck) {
     

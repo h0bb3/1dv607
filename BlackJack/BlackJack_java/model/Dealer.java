@@ -3,16 +3,14 @@ package model;
 import java.util.LinkedList;
 import java.util.Iterator;
 
-public class Dealer extends Player {
+class Dealer extends Player {
 
-  protected Deck m_deck;
+  private Deck m_deck;
   model.rules.IStartNewGameStrategy m_rule;
 
-  
-  
-  public Dealer(model.rules.IStartNewGameStrategy a_rule) {
-    m_deck = null;
-    m_rule = a_rule;
+  public Dealer(model.rules.RuleFactory a_rules) {
+    m_deck = null; 
+    m_rule = a_rules.getStartGameRule();
   }
   
   public boolean isGameOver() {
