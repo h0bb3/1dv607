@@ -11,5 +11,5 @@ You can start the application by using the corresponding main class:
 
 # Note
 * Console view is probably quite windows console specifi.
-* Webbsocket view supports limited size text-messages only, it does not support ping/pong, close or binary messages. Check [view/websocket/Client.java](view/websocket/Client.java) that specifies the comunication protocol used.
+* Webbsocket view supports limited size text-messages only, it does not support ping/pong, close or binary messages. Check [src/view/websocket/Client.java](src/view/websocket/Client.java) that specifies the comunication protocol used.
 * In general this is not how you develop an "optimal" system using websockets or GUIs it is an experiment
