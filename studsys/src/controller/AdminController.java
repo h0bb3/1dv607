@@ -59,24 +59,20 @@ public class AdminController implements model.Registry.IEventListener {
         return m_activeStudent;
     }
 
-    public void addNewStudent(model.Registry a_registry, view.IUI a_ui ) {      // 1. Starts when the admin wants to add a student
+    public void addNewStudent(model.Registry a_registry, view.IUI a_ui ) throws IOException {      // 1. Starts when the admin wants to add a student
 
         while (true) {
-            try {
-                if (a_ui.showStudentForm(null)) {                                               // 2. System asks for the students name and email
-                    // 3. Admin supplies the info and confirms
-                    Student s = a_registry.addNewStudent(a_ui.getName(), a_ui.getEmail()); // 4. The system adds the student
-                    if (s != null) {
-                        a_ui.showAddedStudentConfirmation(s);                                    //      and shows a confirmation
-                    } else {
-                        // some error handling                                               // 4.1 The another student with same email already exists
-                    }
+            if (a_ui.showStudentForm(null)) {                                               // 2. System asks for the students name and email
+                // 3. Admin supplies the info and confirms
+                Student s = a_registry.addNewStudent(a_ui.getName(), a_ui.getEmail()); // 4. The system adds the student
+                if (s != null) {
+                    a_ui.showAddedStudentConfirmation(s);                                    //      and shows a confirmation
                 } else {
-                    // some error handling or user cancelation                                // 3.1 The admin cancels the creation
-                    break;
+                    // some error handling                                               // 4.1 The another student with same email already exists
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
+            } else {
+                // some error handling or user cancelation                                // 3.1 The admin cancels the creation
+                break;
             }
         }
     }
@@ -101,6 +97,9 @@ public class AdminController implements model.Registry.IEventListener {
                     break;
                 case Change:
                     a_selectedStudent = changeStudent(a_registry, a_selectedStudent, a_ui);
+                    if (a_selectedStudent == null) {
+                        done = true;
+                    }
                     break;
                 case None:
                 default:

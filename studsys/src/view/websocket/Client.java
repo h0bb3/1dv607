@@ -165,14 +165,14 @@ public class Client implements view.IUI {
 
     @Override
     public void onDeleteStudent(Iterable<Student> a_allStudents, Student a_deletedStudent) {
-        final String[] msg = {"onAddNewStudent:" + a_deletedStudent.getName() + ":" + a_deletedStudent.getEmail()};
+        final String[] msg = {"onDeletedStudent:" + a_deletedStudent.getName() + ":" + a_deletedStudent.getEmail()};
         a_allStudents.forEach(s -> msg[0] += ":" + s.getName() + ":" + s.getEmail());
         m_frameQueue.add(new Frame(msg[0]));
     }
 
     @Override
     public void onChangeActiveStudent(Student a_newStudent) {
-        final String msg = "onAddNewStudent:" + a_newStudent.getName() + ":" + a_newStudent.getEmail();
+        final String msg = "onChangedStudent:" + a_newStudent.getName() + ":" + a_newStudent.getEmail();
         m_frameQueue.add(new Frame(msg));
     }
 
