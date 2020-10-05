@@ -21,7 +21,7 @@
 <body>
 <h1>Hello StudSys World!</h1>
 <div id="server_message"></div>
-<div id="main_menu"><button type="button" class="btn btn-outline-primary" onclick="ws.send('AddNewStudent')">Add Student</button> <button type="button" class="btn btn-outline-primary" onclick='ws.send("ListAllStudents")'>List Students</button> <button type="button" class="btn btn-outline-secondary">Quit</button></div>
+<div id="main_menu"><button id="student_add_button" type="button" class="btn btn-outline-primary">Add Student</button> <button id="student_list_button" type="button" class="btn btn-outline-primary"'>List Students</button> <button type="button" class="btn btn-outline-secondary">Quit</button></div>
 <div id="students">
     <table class="table table-hover table-striped">
         <thead>
@@ -48,6 +48,39 @@
 
 <script>
 
+    function setOnClick(a_element, a_action) {
+        if (a_action == "") {
+        } else {
+        }
+        a_element.attr("onclick", a_action)
+    }
+
+    function addOnClickMsg(a_element, a_msg) {
+        prevAction = a_element.attr("onclick")
+        newAction = prevAction + ";" + getSendMessage(a_msg)
+        setOnClick(a_element, newAction)
+    }
+
+    function getSendMessage(a_msg) {
+        return a_msg != "" ? "ws.send('" + a_msg +"')" : ""
+    }
+
+    function setAddStudentOnClickMsg(a_msg) {
+        setOnClick($("#student_add_button"), getSendMessage(a_msg))
+    }
+
+    function addAddStudentOnClickMsg(a_msg) {
+        addOnClickMsg($("#student_add_button"), a_msg);
+    }
+
+    function setListStudentsOnClickMsg(a_msg) {
+        setOnClick($("#student_list_button"), getSendMessage(a_msg))
+    }
+
+    function addListStudentsOnClickMsg(a_msg) {
+        addOnClickMsg($("#student_list_button"), a_msg);
+    }
+
     function populateStudentForm(msg) {
 
         var getName = '$("#name").val()'
@@ -58,10 +91,21 @@
 
         if (msg == "showStudentForm") {
             // add new student
+            setAddStudentOnClickMsg("")
+            setListStudentsOnClickMsg("false")
+            addListStudentsOnClickMsg("ListAllStudents")
             $("#student_action_button").text("Add Student");
 
         } else {
             // change existing student
+
+            setAddStudentOnClickMsg("false")
+            addAddStudentOnClickMsg("none")
+            addAddStudentOnClickMsg("AddNewStudent")
+
+            setListStudentsOnClickMsg("false")
+
+
              $("#student_action_button").text("Change Student");
              parts = msg.split(":")
              $("#name").val(parts[1])
@@ -100,20 +144,27 @@
              ws.onmessage = function (evt) {
                 //$("#server_message").append(event.data + "</br>");
                 if (event.data === "getAdminOptions") {
+                    setAddStudentOnClickMsg("AddNewStudent")
+                    setListStudentsOnClickMsg("ListAllStudents")
                     $("#main_menu").show();
                     $("#students").hide();
                     $("#student").hide();
                 } else if (event.data.startsWith("showStudentList")) {
-                    $("#main_menu").hide();
                     $("#student").hide();
 
                     wantsToChangeStudent = false
                     wantsToDeleteStudent = false
 
+                    setAddStudentOnClickMsg("None")
+                    addAddStudentOnClickMsg("AddNewStudent")
+                    setListStudentsOnClickMsg("")
+
                     populateStudentsTable(event.data);
                     $("#students").show();
                 } else if (event.data.startsWith("showStudentForm")) {
-                    $("#main_menu").hide();
+
+                    // populate student form handles the main menu actions as these depend on add student or change student
+
                     $("#students").hide();
                     populateStudentForm(event.data)
                     $("#student").show();

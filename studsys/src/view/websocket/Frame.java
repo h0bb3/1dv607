@@ -8,6 +8,12 @@ import java.nio.charset.StandardCharsets;
 // https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 public class Frame {
 
+    public static class ConnectionClosedException extends IOException {
+        public ConnectionClosedException() {
+            super("Connection Closed by Peer: You need to handle this gracefully");
+        }
+    }
+
     public enum OPCode {
         CONTINUATION(0x00),
         TEXT_FRAME(0x01),
@@ -114,6 +120,10 @@ public class Frame {
 
             if (m_frameType == OPCode.ILLEGAL) {
                 throw new IOException("Illegal OPCode Received: " + ByteMask.OPCODE.getMaskedValue(first));
+            }
+            if (m_frameType == OPCode.CONNECTION_CLOSE) {
+                // TODO: read the frame data
+                throw new ConnectionClosedException();
             }
 
 

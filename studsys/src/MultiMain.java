@@ -24,8 +24,12 @@ public class MultiMain {
             try {
                 c.handleAdminOptions(m_model, m_view);
             } catch (IOException e) {
-                e.printStackTrace();
+                handleIOException(e);   // maybe this should be pushed to the view instead?
             }
+        }
+
+        protected void handleIOException(IOException a_e) {
+            a_e.printStackTrace();
         }
     }
 
@@ -48,6 +52,16 @@ public class MultiMain {
                 return;
             }
             super.run();
+        }
+
+        @Override
+        protected void handleIOException(IOException a_e) {
+            if (a_e.getClass() == view.websocket.Frame.ConnectionClosedException.class) {
+                System.out.println("Connection Closed By Peer");
+                m_wsClient.forceClose();
+            } else {
+                a_e.printStackTrace();
+            }
         }
     }
 

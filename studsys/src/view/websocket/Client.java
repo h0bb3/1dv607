@@ -31,10 +31,16 @@ public class Client implements view.IUI {
 
         while(true) {
             if (m_in.available() > 0) {
-                Frame replyF = new Frame(m_in);
-                String reply = new String(replyF.getData(), StandardCharsets.UTF_8);
-                String parts[] = reply.split(":");
-                return parts;
+                try {
+                    Frame replyF = new Frame(m_in);
+                    String reply = new String(replyF.getData(), StandardCharsets.UTF_8);
+                    String parts[] = reply.split(":");
+                    return parts;
+                } catch (Frame.ConnectionClosedException e) {
+                    // TODO: send the correct close connection reply
+                    // then we close
+                    throw e;
+                }
             } else {
                 if (!m_frameQueue.isEmpty()) {
                     Frame f = m_frameQueue.poll();
