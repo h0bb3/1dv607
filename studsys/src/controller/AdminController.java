@@ -1,7 +1,10 @@
 package controller;
 
+import model.EmailAddress;
+import model.NEString;
 import model.Registry;
 import model.Student;
+import view.Helper;
 import view.IUI;
 
 import java.io.IOException;
@@ -48,7 +51,16 @@ public class AdminController implements model.Registry.IEventListener {
 
         try {
             if (a_ui.showStudentForm(a_selectedStudent)) {
-                m_activeStudent = a_registry.change(m_activeStudent, a_ui.getName(), a_ui.getEmail());
+                try {
+                    Helper h = new Helper();
+                    NEString name = new NEString(a_ui.getName());
+                    EmailAddress email = h.toEmailAddress(a_ui.getEmail());
+
+                    m_activeStudent = a_registry.change(m_activeStudent, name, h.toEmailAddress(a_ui.getEmail()));
+                } catch (IllegalArgumentException e) {
+                    // TODO: this should be a nice view output
+                    System.out.println("Illegal input: " + e.getMessage());
+                }
             } else {
                 m_activeStudent = null;
             }
@@ -64,12 +76,24 @@ public class AdminController implements model.Registry.IEventListener {
         while (true) {
             if (a_ui.showStudentForm(null)) {                                               // 2. System asks for the students name and email
                 // 3. Admin supplies the info and confirms
-                Student s = a_registry.addNewStudent(a_ui.getName(), a_ui.getEmail()); // 4. The system adds the student
-                if (s != null) {
-                    a_ui.showAddedStudentConfirmation(s);                                    //      and shows a confirmation
-                } else {
-                    // some error handling                                               // 4.1 The another student with same email already exists
+                try {
+                    Helper h = new Helper();
+                    NEString name = new NEString(a_ui.getName());
+                    EmailAddress email = h.toEmailAddress(a_ui.getEmail());
+
+                    Student s = a_registry.addNewStudent(name, h.toEmailAddress(a_ui.getEmail())); // 4. The system adds the student
+
+                    if (s != null) {
+                        a_ui.showAddedStudentConfirmation(s);                                    //      and shows a confirmation
+                    } else {
+                        // some error handling                                               // 4.1 The another student with same email already exists
+                    }
+
+                } catch (IllegalArgumentException e) {
+                    // TODO: this should be a nice view output
+                    System.out.println("Illegal input: " + e.getMessage());
                 }
+
             } else {
                 // some error handling or user cancelation                                // 3.1 The admin cancels the creation
                 break;

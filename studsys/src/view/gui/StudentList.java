@@ -2,6 +2,7 @@ package view.gui;
 
 import model.Student;
 import view.AdminOption;
+import view.Helper;
 
 import javax.swing.*;
 import javax.swing.plaf.IconUIResource;
@@ -44,6 +45,7 @@ public class StudentList extends JPanel {
 
     public void populate(Iterable<Student> a_students) {
         super.removeAll();
+        Helper h = new Helper();
 
         GridBagConstraints c = new GridBagConstraints();
 
@@ -52,7 +54,7 @@ public class StudentList extends JPanel {
         for (Student s : a_students) {
             c.gridx = 0; c.gridy = iy;
             c.weightx = 0.9;
-            JButton b = new JButton(s.getName() + " (" + s.getEmail() + ")");
+            JButton b = new JButton(s.getName().str() + " (" + h.toString(s.getEmail()) + ")");
             b.addActionListener(new OnStudentAction(s, false));
             add(b, c);
 

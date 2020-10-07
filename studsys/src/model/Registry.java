@@ -8,6 +8,12 @@ import java.util.function.Predicate;
 
 public class Registry {
 
+    public static class NonUniqueEmailException extends IllegalArgumentException {
+        public NonUniqueEmailException() {
+            super("Email is already used in the registry");
+        }
+    }
+
     public static interface IEventListener {
         void onAddNewStudent(Iterable<Student> a_allStudents, Student a_student);
         void onChangeStudent(Student a_oldStudent, Student a_newStudent);
@@ -25,7 +31,7 @@ public class Registry {
         m_eventListeners.remove(a_listener);
     }
 
-    public Student addNewStudent(String a_name, String a_email) {
+    public Student addNewStudent(NEString a_name, EmailAddress a_email) {
         Student s = new Student(a_name, a_email);
         m_students.add(s);
 
@@ -38,7 +44,7 @@ public class Registry {
         return m_students;
     }
 
-    public Student change(Student a_selectedStudent, String a_newName, String a_newEmail) {
+    public Student change(Student a_selectedStudent, NEString a_newName, EmailAddress a_newEmail) {
         remove(a_selectedStudent);
         Student newStudent =  addNewStudent(a_newName, a_newEmail);
 
@@ -48,7 +54,7 @@ public class Registry {
     }
 
     public void remove(Student a_selectedStudent) {
-        m_students.removeIf( student -> student.getEmail().equalsIgnoreCase(a_selectedStudent.getEmail()));
+        m_students.removeIf( student -> student.getEmail().equals(a_selectedStudent.getEmail()));
 
         m_eventListeners.forEach(el -> el.onDeleteStudent(a_selectedStudent));
     }

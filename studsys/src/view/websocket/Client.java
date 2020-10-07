@@ -2,6 +2,7 @@ package view.websocket;
 
 import model.Student;
 import view.AdminOption;
+import view.Helper;
 import view.StudentOption;
 
 import java.io.*;
@@ -26,6 +27,11 @@ public class Client implements view.IUI {
         m_out = new DataOutputStream(a_out);
     }
 
+    private String buildStudentDataString(Student a_student) {
+        final Helper h = new Helper();
+
+        return a_student.getName().str() + ":" + h.toString(a_student.getEmail());
+    }
 
     private String[] readMessage() throws IOException {
 
@@ -67,7 +73,7 @@ public class Client implements view.IUI {
         m_email = "";
         String msg = new String("showStudentForm");
         if (a_selectedStudent != null) {
-            msg = msg + ":" + a_selectedStudent.getName() + ":" + a_selectedStudent.getEmail();
+            msg = msg + ":" + buildStudentDataString(a_selectedStudent);
         }
         sendMessage(msg);
         String parts[] = readMessage();
@@ -79,7 +85,7 @@ public class Client implements view.IUI {
                 m_email = parts[2];
                 return true;
             } else {
-                throw new IOException("Too many parts in reply from client: " + parts.length);
+                throw new IOException("Expected 3 parts in reply from client, got: " + parts.length);
             }
         } else {
             throw new IOException("Unknow reply from client: " + parts[0]);
@@ -98,14 +104,15 @@ public class Client implements view.IUI {
 
     @Override
     public void showAddedStudentConfirmation(Student a_s) throws IOException {
-        sendMessage("showAddedStudentConfirmation:" + a_s.getName() + ":" + a_s.getEmail());
+        sendMessage("showAddedStudentConfirmation:" +buildStudentDataString(a_s));
     }
 
     @Override
     public Student showStudentList(Iterable<Student> a_students) throws IOException {
+        Helper h = new Helper();
         String msg = "showStudentList";
         for (Student s : a_students) {
-            msg = msg + ":" + s.getName() + ":" + s.getEmail();
+            msg = msg + ":" + buildStudentDataString(s);
         }
 
         sendMessage(msg);
@@ -147,7 +154,7 @@ public class Client implements view.IUI {
 
     @Override
     public StudentOption getStudentOptions(Student a_selectedStudent) throws IOException {
-        sendMessage("getStudentOption:" + a_selectedStudent.getName() + ":" + a_selectedStudent.getEmail());
+        sendMessage("getStudentOption:" + buildStudentDataString(a_selectedStudent));
         String reply[] = readMessage();
 
         for (StudentOption o : StudentOption.values()) {
@@ -164,21 +171,21 @@ public class Client implements view.IUI {
         // basically we should send this to the remote client as an extra message
         // but this needs to be done in a message pump way, maybe in readMessage as this is where we
         // idle... lets try it...
-        final String[] msg = {"onAddNewStudent:" + a_newStudent.getName() + ":" + a_newStudent.getEmail()};
-        a_allStudents.forEach(s -> msg[0] += ":" + s.getName() + ":" + s.getEmail());
+        final String[] msg = {"onAddNewStudent:" + buildStudentDataString(a_newStudent)};
+        a_allStudents.forEach(s -> msg[0] += ":" + buildStudentDataString(s));
         m_frameQueue.add(new Frame(msg[0]));
     }
 
     @Override
     public void onDeleteStudent(Iterable<Student> a_allStudents, Student a_deletedStudent) {
-        final String[] msg = {"onDeletedStudent:" + a_deletedStudent.getName() + ":" + a_deletedStudent.getEmail()};
-        a_allStudents.forEach(s -> msg[0] += ":" + s.getName() + ":" + s.getEmail());
+        final String[] msg = {"onDeletedStudent:" + buildStudentDataString(a_deletedStudent)};
+        a_allStudents.forEach(s -> msg[0] += ":" + buildStudentDataString(s));
         m_frameQueue.add(new Frame(msg[0]));
     }
 
     @Override
     public void onChangeActiveStudent(Student a_newStudent) {
-        final String msg = "onChangedStudent:" + a_newStudent.getName() + ":" + a_newStudent.getEmail();
+        final String msg = "onChangedStudent:" + buildStudentDataString(a_newStudent);
         m_frameQueue.add(new Frame(msg));
     }
 

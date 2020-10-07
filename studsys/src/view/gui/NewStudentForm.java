@@ -1,6 +1,7 @@
 package view.gui;
 
 import model.Student;
+import view.Helper;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -118,10 +119,11 @@ public class NewStudentForm  extends JPanel {
         m_addClicked = false;
         m_cancelClicked = false;
         m_changedStudent = null;
+        Helper h = new Helper();
 
         if (a_selectedStudent != null) {
 
-            setTexts(a_selectedStudent.getName(), a_selectedStudent.getEmail(), "Change Student");
+            setTexts(a_selectedStudent.getName().str(), h.toString(a_selectedStudent.getEmail()), "Change Student");
         } else {
             setTexts("", "", "Add Student");
         }
@@ -133,7 +135,7 @@ public class NewStudentForm  extends JPanel {
                 if (m_changedStudent != null) {
                     a_selectedStudent = m_changedStudent;
                     m_changedStudent = null;
-                    setTexts(a_selectedStudent.getName(), a_selectedStudent.getEmail(), "Change Student");
+                    setTexts(a_selectedStudent.getName().str(), h.toString(a_selectedStudent.getEmail()), "Change Student");
                 }
                 if (m_cancelClicked || m_addClicked) {
                     break;
@@ -163,8 +165,9 @@ public class NewStudentForm  extends JPanel {
     }
 
     public void showAddedStudentConfirmation(Student a_s) {
+        Helper h = new Helper();
         JOptionPane.showMessageDialog(
-                null, "Student (" + a_s.getName() + " " + a_s.getEmail() + ") was added.",
+                null, "Student (" + a_s.getName().str() + " " + h.toString(a_s.getEmail()) + ") was added.",
                 "Student Added", INFORMATION_MESSAGE);
     }
 

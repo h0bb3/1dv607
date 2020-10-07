@@ -2,6 +2,7 @@ package view.console;
 
 import model.Student;
 import view.AdminOption;
+import view.Helper;
 import view.IUI;
 import view.StudentOption;
 
@@ -33,8 +34,10 @@ public class TheUI implements IUI {
             System.out.println("Change Student: " + a_selectedStudent.getName() + " (" + getEmail() +")");
         }
 
-        m_name = promptFor("Name: ", a_selectedStudent == null ? null : a_selectedStudent.getName());
-        m_email = promptFor("Email: ", a_selectedStudent == null ? null : a_selectedStudent.getEmail());
+        Helper h = new Helper();
+
+        m_name = promptFor("Name: ", a_selectedStudent == null ? null : a_selectedStudent.getName().str());
+        m_email = promptFor("Email: ", a_selectedStudent == null ? null : h.toString(a_selectedStudent.getEmail()));
 
         return m_name.length() > 0 && m_email.length() > 0;
     }
@@ -97,17 +100,19 @@ public class TheUI implements IUI {
 
     public void showAddedStudentConfirmation(Student a_s) {
         clearScreen();
+        Helper h = new Helper();
         System.out.println("Student Was Added!");
-        System.out.println("Name: " + a_s.getName());
-        System.out.println("Email: " + a_s.getEmail());
+        System.out.println("Name: " + a_s.getName().str());
+        System.out.println("Email: " + h.toString(a_s.getEmail()));
     }
 
     public model.Student showStudentList(Iterable<Student> a_students) {
         clearScreen();
         System.out.println("All Students:");
+        Helper h = new Helper();
         int ix = 0;
         for (Student s : a_students) {
-            System.out.println("" + ix + ". \t" + s.getName() + " : " + s.getEmail());
+            System.out.println("" + ix + ". \t" + s.getName().str() + " : " + h.toString(s.getEmail()));
             ix++;
         }
 
