@@ -21,7 +21,12 @@
 <body>
 <h1>Hello StudSys World!</h1>
 <div id="server_message"></div>
-<div id="main_menu"><button id="student_add_button" type="button" class="btn btn-outline-primary">Add Student</button> <button id="student_list_button" type="button" class="btn btn-outline-primary"'>List Students</button> <button type="button" class="btn btn-outline-secondary">Quit</button></div>
+<div id="connect_form">
+    <label for="name">Server</label>
+    <input type="text" class="form-control" id="server" value="ws://127.0.0.1:1717">
+    <button type="button" id="server_connect_button" class="btn btn-outline-primary" onclick="connectWS($('#server').val())">Connect</button>
+</div>
+<div id="main_menu"><button id="student_add_button" type="button" class="btn btn-outline-primary">Add Student</button> <button id="student_list_button" type="button" class="btn btn-outline-primary">List Students</button> <button type="button" class="btn btn-outline-secondary" onclick="closeWS()">Quit</button></div>
 <div id="students">
     <table class="table table-hover table-striped">
         <thead>
@@ -29,7 +34,6 @@
         </thead>
         <tbody></tbody>
     </table>
-    <button type="button" class="btn btn-outline-secondary" onclick='ws.send("none")'>Back...</button>
 </div>
 
 <div id="student">
@@ -37,7 +41,7 @@
     <input type="text" class="form-control" id="name">
     <label for="email">Email address</label>
     <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-    <button type="button" class="btn btn-outline-secondary" onclick='wantsToChangeStudent = false; wantsToDeleteStudent = false; ws.send("false")'>Cancel</button><button type="button" id="student_action_button" class="btn btn-outline-primary" onclick=''>Add Student</button>
+    <button type="button" class="btn btn-outline-secondary" onclick='ws.send("false")'>Cancel</button><button type="button" id="student_action_button" class="btn btn-outline-primary" onclick=''>Add Student</button>
 </div>
 
 <!-- Optional JavaScript -->
@@ -124,23 +128,22 @@
         }
         for (var i = startIx; i < parts.length; i+=2, studentIx++) {
 
-            $("#students table tbody").append("<tr ><td onclick='ws.send(" + studentIx +"); wantsToChangeStudent=true;'>" + parts[i] + "</td><td onclick='ws.send(" + studentIx +"); wantsToChangeStudent=true;'>" + parts[i + 1] + "</td><td class='no-hover'><button type='btn' class='btn btn-outline-danger btn-sm' onclick='ws.send(" + studentIx +"); wantsToDeleteStudent=true;'>Delete</button></td></tr>");
+            $("#students table tbody").append("<tr role='button'><td onclick='ws.send(" + studentIx +"); ws.send(\"Change\")'>" + parts[i] + "</td><td onclick='ws.send(" + studentIx +"); ws.send(\"Change\")'>" + parts[i + 1] + "</td><td class='no-hover'><button type='btn' class='btn btn-outline-danger btn-sm' onclick='ws.send(" + studentIx +"); ws.send(\"Delete\")'>Delete</button></td></tr>");
         }
     }
-    var ws
 
-    // these should probably be handled differently
-    // communication via global variables... mmmh
-    var wantsToChangeStudent = false
-    var wantsToDeleteStudent = false
-
-    $(document).ready(function() {
+    function closeWS() {
+        $("#connect_form").show();
         $("#main_menu").hide();
         $("#students").hide();
+        $("#student").hide();
+        ws.close();
+    }
 
-        ws = new WebSocket("ws://127.0.0.1:1717");
+    function connectWS(a_url) {
+        ws = new WebSocket(a_url);
+
         ws.onopen = function () {
-
              ws.onmessage = function (evt) {
                 //$("#server_message").append(event.data + "</br>");
                 if (event.data === "getAdminOptions") {
@@ -151,9 +154,6 @@
                     $("#student").hide();
                 } else if (event.data.startsWith("showStudentList")) {
                     $("#student").hide();
-
-                    wantsToChangeStudent = false
-                    wantsToDeleteStudent = false
 
                     setAddStudentOnClickMsg("None")
                     addAddStudentOnClickMsg("AddNewStudent")
@@ -174,16 +174,7 @@
                         populateStudentsTable(event.data);
                     }
                 } else if (event.data.startsWith("getStudentOption")) {
-                    if (wantsToChangeStudent) {
-                        ws.send("Change")
-                    } else if (wantsToDeleteStudent) {
-                        ws.send("Delete")
-                    } else {
-                        ws.send("None")
-                    }
-
-                    wantsToChangeStudent = false
-                    wantsToDeleteStudent = false
+                    // we should actually never idle here as a new command is sent almost immediately (Change/Delete)
                 } else if (event.data.startsWith("onChangedStudent")) {
                     if ($("#student").is(":visible")) {
                         populateStudentForm(event.data)
@@ -195,8 +186,21 @@
                 console.log(event.data);
             }
 
+            $("#connect_form").hide()
             ws.send("ready")
+            ws.send("ListAllStudents")
         }
+    }
+
+    var ws
+
+    // these should probably be handled differently
+    // communication via global variables... mmmh
+
+    $(document).ready(function() {
+        $("#main_menu").hide();
+        $("#students").hide();
+        $("#student").hide();
      });
 
 

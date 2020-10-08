@@ -8,7 +8,7 @@ public class ServerMain {
 
         model.Registry m = new model.Registry();
 
-        MultiMain.WebSocketUIThread wsUI = new MultiMain.WebSocketUIThread(m);
+        MultiMain.WebSocketUIThread wsUI = new MultiMain.WebSocketUIThread(m, a_args.length == 1 ? a_args[0] : null);
 
         m.addNewStudent(new NEString("a"), new EmailAddress(new NEString("a"), new NEString [] {new NEString("gmail"), new NEString("com")}));
         m.addNewStudent(new NEString("b"), new EmailAddress(new NEString("b"), new NEString [] {new NEString("gmail"), new NEString("com")}));

@@ -69,9 +69,11 @@ public class MultiMain {
 
     public static class WebSocketUIThread extends Thread {
         model.Registry m_model;
+        String m_pathToGetResponseFile;
 
-        WebSocketUIThread(model.Registry a_model) {
+        WebSocketUIThread(model.Registry a_model, String a_pathToGetResponseFile) {
             m_model = a_model;
+            m_pathToGetResponseFile = a_pathToGetResponseFile;
         }
 
 
@@ -80,7 +82,7 @@ public class MultiMain {
 
             view.websocket.Server s = null;
             try {
-                s = new view.websocket.Server();
+                s = new view.websocket.Server(m_pathToGetResponseFile);
             } catch (IOException e) {
                 e.printStackTrace();
                 return;
@@ -89,8 +91,12 @@ public class MultiMain {
 
             while(true) {
                 try {
-                    UIThread t = new WebSocketClientThread(m_model, s.acceptClient());
-                    t.start();
+                    view.websocket.Client c = s.acceptClient();
+
+                    if (c != null) {
+                        UIThread t = new WebSocketClientThread(m_model, c);
+                        t.start();
+                    }
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -104,7 +110,7 @@ public class MultiMain {
         model.Registry m = new model.Registry();
         UIThread console = new UIThread(m, new TheUI());
         UIThread gui = new UIThread(m, new view.gui.TheUI());
-        WebSocketUIThread wsUI = new WebSocketUIThread(m);
+        WebSocketUIThread wsUI = new WebSocketUIThread(m, a_args.length == 1 ? a_args[0] : null);
 
         m.addNewStudent(new NEString("a"), new EmailAddress(new NEString("a"), new NEString [] {new NEString("gmail"), new NEString("com")}));
         m.addNewStudent(new NEString("b"), new EmailAddress(new NEString("b"), new NEString [] {new NEString("gmail"), new NEString("com")}));
