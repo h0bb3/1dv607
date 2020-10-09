@@ -39,9 +39,17 @@ public class Client implements view.IUI {
             if (m_in.available() > 0) {
                 try {
                     Frame replyF = new Frame(m_in);
-                    String reply = new String(replyF.getData(), StandardCharsets.UTF_8);
-                    String parts[] = reply.split(":");
-                    return parts;
+                    if (replyF.isText()) {
+                        String reply = new String(replyF.getData(), StandardCharsets.UTF_8);
+                        String parts[] = reply.split(":");
+                        return parts;
+                    } else if (replyF.isPing()) {
+                        // reply with a pong asap
+                        replyF.createPong().send(m_out);
+                    } else if (replyF.isPong()) {
+                        // we are currently not sending any pings
+                        // however IE seems to send unsolicited pongs
+                    }
                 } catch (Frame.ConnectionClosedException e) {
                     // TODO: send the correct close connection reply
                     // then we close

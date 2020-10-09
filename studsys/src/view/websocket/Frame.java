@@ -4,9 +4,32 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 
 // https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 public class Frame {
+
+
+
+    public boolean isText() {
+        return m_frameType == OPCode.TEXT_FRAME;
+    }
+
+    public boolean isPing() {
+        return m_frameType == OPCode.PING;
+    }
+
+    public boolean isPong() {
+         return m_frameType == OPCode.PONG;
+    }
+
+    public Frame createPong() {
+        if (!isPing()) {
+            return null;
+        }
+
+        return new Frame(OPCode.PONG, m_data);
+    }
 
     public static class ConnectionClosedException extends IOException {
         public ConnectionClosedException() {
@@ -20,7 +43,7 @@ public class Frame {
         BINARY_FRAME(0x02),
         CONNECTION_CLOSE(0x08),
         PING(0x09),
-        PONG(0xA0),
+        PONG(0x0A),
         ILLEGAL(0xFF);
 
 
@@ -91,6 +114,11 @@ public class Frame {
 
     }
 
+    private Frame(OPCode a_opCode, byte[] a_data) {
+        m_frameType = a_opCode;
+        m_data = Arrays.copyOf(a_data, a_data.length);
+    }
+
     byte[] getData() {
         return m_data;
     }
@@ -118,12 +146,22 @@ public class Frame {
 
             // TODO: Handle divided packages
 
-            if (m_frameType == OPCode.ILLEGAL) {
-                throw new IOException("Illegal OPCode Received: " + ByteMask.OPCODE.getMaskedValue(first));
+            if (m_frameType == OPCode.PING) {
+                throw new IOException("Unsupported PING OPCode Received: " + ByteMask.OPCODE.getMaskedValue(first));
             }
-            if (m_frameType == OPCode.CONNECTION_CLOSE) {
+
+            if (m_frameType == OPCode.PONG) {
+                //throw new IOException("Unsupported PONG OPCode Received: " + ByteMask.OPCODE.getMaskedValue(first));
+                m_frameType = OPCode.PONG;
+            } else if (m_frameType == OPCode.PING) {
+                m_frameType = OPCode.PING;
+            } else if (m_frameType == OPCode.ILLEGAL) {
+                throw new IOException("Illegal OPCode Received: " + ByteMask.OPCODE.getMaskedValue(first));
+            } else if (m_frameType == OPCode.CONNECTION_CLOSE) {
                 // TODO: read the frame data
                 throw new ConnectionClosedException();
+            } else if (m_frameType == OPCode.TEXT_FRAME) {
+                m_frameType = OPCode.TEXT_FRAME; // TODO: This is hard coded for now
             }
 
 
@@ -133,7 +171,7 @@ public class Frame {
             } else if (size == 127) {
                 size = a_in.readLong();
             }
-            m_frameType = OPCode.TEXT_FRAME; // TODO: This is hard coded for now
+
             //System.out.println("fin:" +  ByteMask.FIN.getMaskedValue(first));
             //System.out.println("payload len 0:" + size);
 

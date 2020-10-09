@@ -99,9 +99,12 @@
             setListStudentsOnClickMsg("false")
             addListStudentsOnClickMsg("ListAllStudents")
             $("#student_action_button").text("Add Student");
+            $("#student_action_button").attr("onclick", "ws.send('true:' + " + getName + " + ':' + " + getEmail + ")")
 
         } else {
             // change existing student
+
+            $("#student_action_button").attr("onclick", "ws.send('true:' + " + getName + " + ':' + " + getEmail + "); ws.send('None')")
 
             setAddStudentOnClickMsg("false")
             addAddStudentOnClickMsg("none")
@@ -175,6 +178,7 @@
                     }
                 } else if (event.data.startsWith("getStudentOption")) {
                     // we should actually never idle here as a new command is sent almost immediately (Change/Delete)
+
                 } else if (event.data.startsWith("onChangedStudent")) {
                     if ($("#student").is(":visible")) {
                         populateStudentForm(event.data)
