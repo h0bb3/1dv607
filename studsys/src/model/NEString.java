@@ -14,6 +14,11 @@ public class NEString {
         return m_s;
     }
 
+    @Override
+    public String toString() {
+      return str();
+    } 
+
     public boolean equals(Object a_obj) {
         if (this == a_obj) {
             return true;

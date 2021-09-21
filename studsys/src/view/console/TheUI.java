@@ -28,13 +28,13 @@ public class TheUI implements IUI {
 
     public boolean showStudentForm(Student a_selectedStudent) {
         clearScreen();
+        Helper h = new Helper();
+        
         if (a_selectedStudent == null) {
             System.out.println("Add New Student!");
         } else {
-            System.out.println("Change Student: " + a_selectedStudent.getName() + " (" + getEmail() +")");
+            System.out.println("Change Student: " + a_selectedStudent.getName() + " (" + h.toString(a_selectedStudent.getEmail()) +")");
         }
-
-        Helper h = new Helper();
 
         m_name = promptFor("Name: ", a_selectedStudent == null ? null : a_selectedStudent.getName().str());
         m_email = promptFor("Email: ", a_selectedStudent == null ? null : h.toString(a_selectedStudent.getEmail()));
@@ -162,10 +162,11 @@ public class TheUI implements IUI {
     @Override
     public StudentOption getStudentOptions(model.Student a_selectedStudent) {
         StudentOption validChoice = null;
+        Helper h = new Helper();
 
         while (validChoice == null) {
             clearScreen();
-            System.out.println("Student: " + a_selectedStudent.getName() + " (" + a_selectedStudent.getEmail() + ") is selected.");
+            System.out.println("Student: " + a_selectedStudent.getName() + " (" + h.toString(a_selectedStudent.getEmail()) + ") is selected.");
             System.out.println("1 - Delete");
             System.out.println("2 - Change");
             System.out.println("r - Return");
