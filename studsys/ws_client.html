@@ -126,7 +126,7 @@
         $("#students table").append("<tbody></tbody>")
         var studentIx = 0
         var startIx = 1
-        if (msg.startsWith("onAddNewStudent")) {
+        if (msg.startsWith("onAddNewStudent") || msg.startsWith("onDeletedStudent")) {
             startIx = 3
         }
         for (var i = startIx; i < parts.length; i+=2, studentIx++) {
@@ -184,7 +184,9 @@
                         populateStudentForm(event.data)
                     }
                 } else if (event.data.startsWith("onDeletedStudent")) {
-                    // TODO
+                  if ($("#students").is(":visible")) {
+                        populateStudentsTable(event.data);
+                  }
                 }
 
                 console.log(event.data);
