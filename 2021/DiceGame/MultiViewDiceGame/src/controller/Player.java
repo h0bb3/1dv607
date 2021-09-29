@@ -1,13 +1,13 @@
 package controller;
 import model.DiceGame;
-import view.ConsoleUI;
+import view.View;
 
 public class Player implements model.DiceRolledObserver {
-  ConsoleUI ui;
+  view.View ui;
   DiceGame game;
 
-  Player(DiceGame g, ConsoleUI i) {
-    ui = i;
+  Player(DiceGame g, view.View view) {
+    ui = view;
     game = g;
 
     game.addSubscriber(this);
@@ -18,8 +18,8 @@ public class Player implements model.DiceRolledObserver {
   // Game rolls the dices and a winning or loosing message is displayed
   // The Player can choose to play agin or quit
   public void playGame() {
-    ui.showWelcomeMessage();
     do {
+      ui.showWelcomeMessage();
       if (game.playGame()) {
         ui.showWinningMessage();
       } else {
